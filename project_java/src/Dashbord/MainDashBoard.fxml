@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashbord.MainDashBoardController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="605.0" prefWidth="214.0" style="-fx-background-color: #525256;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="240.0" prefWidth="200.0" style="-fx-background-color: #525256;">
+               <children>
+                  <ImageView fitHeight="51.0" fitWidth="59.0" layoutX="75.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../recourse/list.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#797272" layoutX="115.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TodoList">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#c3b0b0" layoutX="16.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collaborative" wrappingWidth="145.2880859375">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txt_username" fill="#ebdbdb" layoutX="28.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD;" text="Ahmed saeed" textAlignment="CENTER" wrappingWidth="145.28807300329208">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="imageview0" fitHeight="58.0" fitWidth="52.0" layoutX="75.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../recourse/male.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="BtnDashBoard" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#goToDashboard" prefHeight="60.0" prefWidth="223.0" style="-fx-background-color: #ddd1d8;" text="DashBoard">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="BtnNotification" layoutX="10.0" layoutY="222.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#goToNotification" prefHeight="60.0" prefWidth="255.0" style="-fx-background-color: #ddd1d8;" text="Notificatioin">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="BtnTeamMate" layoutX="10.0" layoutY="281.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#goToTeamMate" prefHeight="60.0" prefWidth="230.0" style="-fx-background-color: #ddd1d8;" text="TeamMate">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="BtnGraph" layoutX="10.0" layoutY="337.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#goToGraph" prefHeight="60.0" prefWidth="348.0" style="-fx-background-color: #ddd1d8;" text="Graph">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+               </VBox.margin>
+            </Separator>
+            <Button fx:id="BtnLogout" layoutX="10.0" layoutY="390.0" mnemonicParsing="false" onAction="#LogOutBtn" prefHeight="56.0" prefWidth="296.0" style="-fx-background-color: #525256; -fx-border-width: 2px; -fx-border-color: #c3b0b0;" text="Logout" textFill="#c3b0b0">
+               <VBox.margin>
+                  <Insets bottom="80.0" left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="8.0" top="8.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

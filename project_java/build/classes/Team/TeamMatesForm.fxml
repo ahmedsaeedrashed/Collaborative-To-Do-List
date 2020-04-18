@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="764.0" style="-fx-background-color: #4b4b4e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Team.TeamMatesFormController">
+   <children>
+      <Button fx:id="Add_id" layoutX="423.0" layoutY="14.0" mnemonicParsing="false" onAction="#Add_btn" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4b4b4e; -fx-border-color: #ffffff; -fx-border-radius: 10px;" text="Add Team Mates" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0" />
+      <Label layoutX="120.0" layoutY="63.0" prefHeight="25.0" prefWidth="219.0" style="-fx-alignment: center;" text="Your Team Mates" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="428.0" layoutY="63.0" prefHeight="25.0" prefWidth="219.0" style="-fx-alignment: center;" text="Waiting" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Button fx:id="delete_btn" layoutX="461.0" layoutY="482.0" mnemonicParsing="false" onAction="#delete_Request_Action" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4b4b4e; -fx-border-color: #ffffff; -fx-border-radius: 10px;" text="Remove Request" textFill="WHITE" />
+      <Label fx:id="Waiting_error" layoutX="419.0" layoutY="446.0" prefHeight="25.0" prefWidth="237.0" textFill="WHITE" />
+      <ListView fx:id="List_Team_mates" layoutX="111.0" layoutY="88.0" prefHeight="358.0" prefWidth="237.0" />
+      <ListView fx:id="List_Waiting" layoutX="419.0" layoutY="88.0" prefHeight="358.0" prefWidth="237.0" />
+      <Button fx:id="deleteTeam_btn" layoutX="153.0" layoutY="482.0" mnemonicParsing="false" onAction="#delete_Team_Action" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4b4b4e; -fx-border-color: #ffffff; -fx-border-radius: 10px;" text="Remove Team Mates" textFill="WHITE" />
+      <Label fx:id="Team_error" layoutX="111.0" layoutY="446.0" prefHeight="25.0" prefWidth="237.0" textFill="WHITE" />
+   </children>
+</AnchorPane>

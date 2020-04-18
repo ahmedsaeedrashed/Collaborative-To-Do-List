@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="686.0" style="-fx-background-color: #525256;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddTask.AddTaskController">
+   <children>
+      <TextField fx:id="TaskName" layoutX="180.0" layoutY="69.0" onMouseClicked="#TaskNameOnClick" prefHeight="35.0" prefWidth="339.0" promptText="Task Name" />
+      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="121.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recourse/tasks.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="35.0" layoutX="124.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recourse/date.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="DeadLine" layoutX="357.0" layoutY="124.0" onMouseClicked="#DeadLineOnClick" prefHeight="35.0" prefWidth="162.0" promptText="Deadline" />
+      <ImageView fitHeight="42.0" fitWidth="35.0" layoutX="126.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recourse/color.png" />
+         </image>
+      </ImageView>
+      <ColorPicker fx:id="task_color" layoutX="180.0" layoutY="183.0" prefHeight="35.0" prefWidth="339.0" />
+      <RadioButton fx:id="todo_id" layoutX="191.0" layoutY="249.0" mnemonicParsing="false" selected="true" text="TODO" textFill="#b7b9bc">
+         <toggleGroup>
+            <ToggleGroup fx:id="status" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="inprogress_id" layoutX="286.0" layoutY="249.0" mnemonicParsing="false" text="INPROGRESS" textFill="#b7b9bc" toggleGroup="$status" />
+      <RadioButton fx:id="done_id" layoutX="433.0" layoutY="249.0" mnemonicParsing="false" text="DONE" textFill="#b7b9bc" toggleGroup="$status" />
+      <ImageView fitHeight="42.0" fitWidth="35.0" layoutX="124.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recourse/status.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="AddTask" layoutX="248.0" layoutY="521.0" mnemonicParsing="false" onAction="#AddTaskAction" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #7d86da; -fx-font-weight: bold;" text="Add Task" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ListView fx:id="AllItemsListView" editable="true" layoutX="178.0" layoutY="376.0" prefHeight="126.0" prefWidth="339.0" />
+      <TextField fx:id="AdditemsFeild" layoutX="180.0" layoutY="300.0" prefHeight="35.0" prefWidth="339.0" promptText="Add Itemes" />
+      <ImageView fitHeight="42.0" fitWidth="35.0" layoutX="130.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recourse/items.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="AddItem" layoutX="534.0" layoutY="304.0" mnemonicParsing="false" onAction="#AddItemAction" prefHeight="27.0" prefWidth="74.0" style="-fx-background-color: #7d86da;" text="Add item" textFill="#7ed9d0" />
+      <Text fill="#b7b9bc" layoutX="182.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Item to delete it ." wrappingWidth="256.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Button fx:id="DeleteItem" layoutX="531.0" layoutY="377.0" mnemonicParsing="false" onAction="#DeleteItemAction" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #7d86da;" text="Delete item" textFill="#7ed9d0" />
+      <Text fill="#ffdcdc" layoutX="202.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter Task Name" visible="false" wrappingWidth="338.99999314546585" />
+      <Text fill="#ffdcdc" layoutX="202.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Choose Date" visible="false" wrappingWidth="338.99999314546585" />
+      <ImageView fitHeight="27.0" fitWidth="35.0" layoutX="518.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recourse/colobaritive.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="addCollaborative" layoutX="551.0" layoutY="15.0" mnemonicParsing="false" onAction="#AddCollaborativeAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #525256; -fx-border-color: #b7b9bc; -fx-border-radius: 5px;" text="Add Collaborative" textFill="#b7b9bc" />
+      <Text fx:id="TaskNameError" fill="WHITE" layoutX="181.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Task Name" visible="false" wrappingWidth="235.13671875" />
+      <Text fx:id="DateError" fill="WHITE" layoutX="181.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add End Date" visible="false" wrappingWidth="235.13671875" />
+      <DatePicker fx:id="SartDate" layoutX="182.0" layoutY="124.0" onMouseClicked="#StartDateOnClick" prefHeight="35.0" prefWidth="162.0" promptText="Start Date" />
+   </children>
+</AnchorPane>

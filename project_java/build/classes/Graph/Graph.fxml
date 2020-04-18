@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="546.0" prefWidth="684.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graph.GraphController">
+   <children>
+      <AreaChart fx:id="areaChart" layoutX="123.0" layoutY="131.0" prefHeight="389.0" prefWidth="463.0">
+        <xAxis>
+          <CategoryAxis label="My tasks                         Tasks assigned to me " side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Number of Tasks" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Label fx:id="createdTaskCount" alignment="CENTER" layoutX="174.0" layoutY="27.0" prefHeight="74.0" prefWidth="101.0" text="7" textAlignment="CENTER" textFill="#f63b11">
+         <font>
+            <Font name="AR ESSENCE" size="51.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="101.0" text="My tasks">
+         <font>
+            <Font name="Aharoni Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="AssignedTaskCount" alignment="CENTER" layoutX="432.0" layoutY="27.0" prefHeight="74.0" prefWidth="101.0" text="5" textAlignment="JUSTIFY" textFill="#ffaa0c78">
+         <font>
+            <Font name="AR ESSENCE" size="51.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="101.0" text="Tasks assigned to me">
+         <font>
+            <Font name="Aharoni Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="project_java.jnlp">
+  <information>
+    <title>project_java</title>
+    <vendor>ALMOSTAFA</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\gson-2.2.4.jar" size="190418" download="eager" />
+    <jar href="lib\java-json.jar" size="84697" download="eager" />
+    <jar href="project_java.jar" size="171371" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="project_java" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="todolist_project.TodoList_project"  name="project_java" />
+  <update check="always"/>
+</jnlp>

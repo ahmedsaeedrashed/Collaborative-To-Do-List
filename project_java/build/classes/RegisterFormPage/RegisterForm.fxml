@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="538.0" prefWidth="548.0" style="-fx-background-color: #525256;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegisterFormPage.RegisterFormController">
+   <children>
+      <TextField fx:id="registerUserName" layoutX="136.0" layoutY="210.0" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#goToPassword" onMouseClicked="#HideErrorMessage" opacity="0.9" prefHeight="33.0" prefWidth="290.0" promptText="Username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="registerEmail" layoutX="136.0" layoutY="325.0" onMouseClicked="#HideErrorMessage" opacity="0.91" prefHeight="33.0" prefWidth="290.0" promptText="Email" style="-fx-border-radius: 10px;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="registerSignupBtn" layoutX="172.0" layoutY="455.0" mnemonicParsing="false" onAction="#SignUpAction" prefHeight="33.0" prefWidth="217.0" style="-fx-background-color: #7d86da; -fx-font-weight: bold;" text="Sign up" textFill="WHITE" />
+      <RadioButton fx:id="registerGenderMale" layoutX="136.0" layoutY="413.0" mnemonicParsing="false" selected="true" text="Male" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="Gender" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="registerGenderFemale" layoutX="221.0" layoutY="413.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$Gender" />
+      <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="74.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../recourse/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="74.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../recourse/key.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="74.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../recourse/mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="74.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../recourse/gender.png" />
+         </image>
+      </ImageView>
+      <Text fill="#b7b9bc" layoutX="136.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Gender" wrappingWidth="136.00000366568565">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="registerLoginBtn" layoutX="436.0" layoutY="24.0" mnemonicParsing="false" onAction="#LoginbtnAction" prefHeight="33.0" prefWidth="77.0" style="-fx-background-color: transparent; -fx-border-color: #7d86da; -fx-border-radius: 6px; -fx-font-weight: Bold;" text="Login" textFill="WHITE" />
+      <ImageView fitHeight="51.0" fitWidth="59.0" layoutX="249.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../recourse/tolist.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="184.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collaborative">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="285.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TodoList" wrappingWidth="68.88818359375">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="registerPassword" layoutX="135.0" layoutY="268.0" onKeyPressed="#goToEmail" onMouseClicked="#HideErrorMessage" opacity="0.91" prefHeight="33.0" prefWidth="290.0" promptText="Password" />
+      <Label fx:id="usernameError" disable="true" layoutX="136.0" layoutY="243.0" prefHeight="17.0" prefWidth="290.0" textFill="WHITE" />
+      <Label fx:id="PasswordError" disable="true" layoutX="136.0" layoutY="301.0" prefHeight="17.0" prefWidth="290.0" textFill="WHITE" />
+      <Label fx:id="EmailError" disable="true" layoutX="136.0" layoutY="358.0" prefHeight="23.0" prefWidth="290.0" textFill="WHITE" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
